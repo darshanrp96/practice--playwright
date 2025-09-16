@@ -10,6 +10,12 @@ await page.click("//button[@type='submit']");
 await page.waitForLoadState('networkidle');
 await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
 
+await page.click("//img[@class='oxd-userdropdown-img']");
+await page.click("//a[text()='Logout']");
+
+await page.waitForTimeout(3000);
+await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
 })
 
 
