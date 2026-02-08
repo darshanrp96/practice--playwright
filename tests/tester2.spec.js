@@ -1,5 +1,6 @@
 import {test,expect} from "@playwright/test"
 import path from "path";
+//test.use({viewport : {width: 1440, height: 900}})
 
 test('Login test', async ({page}) => {
 
@@ -13,7 +14,7 @@ await page.getByRole('button', { name: 'Login' }).click();
 
 await expect(page).toHaveTitle('OrangeHRM');
 
-//logout
+//logout 
 
 await page.getByAltText("profile picture").click();
 await page.getByText("Logout").click();
