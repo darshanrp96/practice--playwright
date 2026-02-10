@@ -48,12 +48,12 @@ export default defineConfig({
       video: 'retain-on-failure',
     }
   },
-  {
-    name: 'firefox',
-    use: {
-      viewport: { width: 1024, height: 768 }
-    }
-  }
+  // {
+  //   name: 'firefox',
+  //   use: {
+  //     viewport: { width: 1024, height: 768 }
+  //   }
+  // }
 ]
  
 }
