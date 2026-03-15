@@ -7,5 +7,7 @@ test('Alert check', async ({page}) =>{
     const at = new Alert(page);
     await at.navigate();
     //await at.clickalert();
-    await at.clickconfirm();
+   // await at.clickconfirm();
+
+    await at.clcickprompt();
 })
