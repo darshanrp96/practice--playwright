@@ -1,5 +1,6 @@
 import { test,expect } from "@playwright/test";
 import { request } from "http";
+import { json } from "stream/consumers";
 
 test('playwright api test', async ({request})=>{
 
@@ -14,5 +15,9 @@ const respstatusText= resp.statusText();
 
 expect(respstatus).toBe(200);
 expect(respstatusText).toBe('OK');
+
+expect(respjson).toHaveProperty("id",1);
+expect(respjson).toHaveProperty("title","sunt aut facere repellat provident occaecati excepturi optio reprehenderit");
+expect(respjson.body).toContain("quia et suscipit");
 
 });
